@@ -14,7 +14,8 @@ module.exports = {
       },
       colors:{
         primary_color:'#D20A11',
-        secondary_color:'#838B8D'
+        secondary_color:'#838B8D',
+        blue_Color:'#00415A'
       }
     },
   },
