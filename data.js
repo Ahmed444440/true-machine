@@ -21,32 +21,62 @@ export const partnerslider = [
     {
         id:1 , 
         title : 'Kimla',
-        src:'/assets/parter.jpg' ,
+        src:'/assets/partner.jpg' ,
     },
     {
         id:2 , 
         title : 'Kimla',
-        src:'/assets/parter.jpg' ,
+        src:'/assets/partner.jpg' ,
     },
     {
         id:3 , 
         title : 'Kimla',
-        src:'/assets/parter.jpg' ,
+        src:'/assets/partner.jpg' ,
     },
     {
         id:4 , 
         title : 'Kimla',
-        src:'/assets/parter.jpg' ,
+        src:'/assets/partner.jpg' ,
     },
     {
         id:5 , 
         title : 'Kimla',
-        src:'/assets/parter.jpg' ,
+        src:'/assets/partner.jpg' ,
     },
     {
         id:6 , 
         title : 'Kimla',
-        src:'/assets/parter.jpg' ,
+        src:'/assets/partner.jpg' ,
+    },
+    {
+        id:7 , 
+        title : 'Kimla',
+        src:'/assets/partner.jpg' ,
+    },
+    {
+        id:8 , 
+        title : 'Kimla',
+        src:'/assets/partner.jpg' ,
+    },
+    {
+        id:9 , 
+        title : 'Kimla',
+        src:'/assets/partner.jpg' ,
+    },
+    {
+        id:10 , 
+        title : 'Kimla',
+        src:'/assets/partner.jpg' ,
+    },
+    {
+        id:11 , 
+        title : 'Kimla',
+        src:'/assets/partner.jpg' ,
+    },
+    {
+        id:12 , 
+        title : 'Kimla',
+        src:'/assets/partner.jpg' ,
     },
 ]
 
