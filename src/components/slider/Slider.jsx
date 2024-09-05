@@ -2,7 +2,65 @@ import React from 'react'
 
 const Slider = () => {
   return (
-    <div>Slider</div>
+    <div >
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        <h1>Slider</h1>
+        </div>
   )
 }
 
