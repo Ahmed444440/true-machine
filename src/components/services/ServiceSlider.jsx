@@ -53,14 +53,16 @@ const ServiceSlider = () => {
                 <div>
                     {ServicesData?.map((item, index) => (
                         <SwiperSlide key={index} className=" mt-5">
-                            {/* "bg-white rounded-lg shadow-md overflow-hidden */}
                             <div className="text-center lg:text-start">
-                                <div className="p-1">
-                                    <img className='mx-auto  object-cover' alt={'img'} src={item.src} />
+                                <div className="p-1 ">
+                                    <div className='overflow-hidden'>
+                                        <img className='mx-auto  h-[250px] rounded-md object-cover  duration-300 hover:scale-105  cursor-pointer' alt={'img'} src={item.src} />
+
+                                    </div>
                                     <h2 className="text-xl font-bold text-slate-800  mb-2 mt-5">{item.title}</h2>
                                     <div className=" text-[15px] text-gray-600  font-[500] " dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize((truncateText(item.desc, 20))) }} />
                                     <div className='my-10'>
-                                        <Link href={`/`} className={'text-black border-2 border-gray-400   hover:border-primary_Color_Light hover:text-primary_Color_Light py-3 px-4'} >
+                                        <Link href={`/`} className={'hover:bg-btn_color text-btn_color font-semibold  border-[1px] rounded-md border-gray-400 hover:text-white hover py-3 px-7'} >
                                             Read More
                                         </Link>
                                     </div>
