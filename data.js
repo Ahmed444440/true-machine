@@ -1,5 +1,3 @@
-
-import side  from './public/assets/slider_1.jpg'
 export  const sliderData =[
     {
         id:1,
@@ -18,8 +16,39 @@ export  const sliderData =[
         des:'Based on more than 20 years of experience in this field Value technologies is able to satisfy any request of the customers in the engineering solutions sector, and in the apparel and non-apparel industry sector. We are focusing to deliver equipments with different qualities of materials.',
         src:'/assets/slider_1.jpg'
     }
+] 
+export const partnerslider = [
+    {
+        id:1 , 
+        title : 'Kimla',
+        src:'/assets/parter.jpg' ,
+    },
+    {
+        id:2 , 
+        title : 'Kimla',
+        src:'/assets/parter.jpg' ,
+    },
+    {
+        id:3 , 
+        title : 'Kimla',
+        src:'/assets/parter.jpg' ,
+    },
+    {
+        id:4 , 
+        title : 'Kimla',
+        src:'/assets/parter.jpg' ,
+    },
+    {
+        id:5 , 
+        title : 'Kimla',
+        src:'/assets/parter.jpg' ,
+    },
+    {
+        id:6 , 
+        title : 'Kimla',
+        src:'/assets/parter.jpg' ,
+    },
 ]
-
 
 export const navbar = [
 	{
