@@ -1,6 +1,5 @@
 'use client'
 import React ,{ createContext, useEffect ,useState } from 'react'
-import axios from 'axios';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
