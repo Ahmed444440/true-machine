@@ -137,7 +137,7 @@ const NavBar = () => {
   
   
   return (
-    <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0   ${isFixed && ' fixed top-0 left-0 shadow-lg h-14  '}`}>
+    <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0 bg-white pb-2  ${isFixed && ' fixed top-0 left-0 shadow-lg h-14  '}`}>
 
     <div>
       {
