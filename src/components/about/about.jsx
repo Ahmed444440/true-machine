@@ -3,8 +3,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="bg-white py-12 px-8 md:px-24">
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+    <section className="bg-white pt-7">
+      <div className="lg:px-16 px-5 mx-auto flex flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2 md:mt-0 md:ml-10 mb-6">
           <h2 className="text-5xl text-primary_color font-bold mb-4">About Us</h2>
           <p className="text-secondary_color mb-4">
