@@ -1,6 +1,5 @@
 'use client'
 import React ,{ createContext, useEffect ,useState } from 'react'
-import axios from 'axios';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
@@ -34,11 +33,11 @@ const Slider = () => {
        { sliderData.map((res)=>(
           <>
           <SwiperSlide className='relative text-center'>
-          <div className='w-2/4 absolute  text-white top-60 left-96'>
-          <h1 className='text-[70px] font-bold'>{res.title}</h1>
-          <p className='mt-10'>{res.des}</p>
+          <div className='lg:w-2/4 w-full absolute top-5  text-white lg:top-60 lg:left-96'>
+          <h1 className='lg:text-[70px]  font-bold'>{res.title}</h1>
+          <p className='lg:mt-12 mt-0 text-sm lg:text-xl'>{res.des}</p>
           </div>
-          <img className='w-full' src={res.src} alt="" />
+          <img className='w-full h-full' src={res.src} alt="" />
           
         </SwiperSlide>
           </>

@@ -137,13 +137,13 @@ const NavBar = () => {
   
   
   return (
-    <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0   ${isFixed && ' fixed top-0 left-0 shadow-lg h-14  '}`}>
+    <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0 bg-white py-4  ${isFixed && ' fixed top-0 left-0 h-16  '}`}>
 
     <div>
       {
         showmenuIcon === true ?
           (
-            <div className='flex  justify-between items-center pt-4 '>
+            <div className='flex  justify-between items-center '>
               
                   <Link href={'/'}>
                     <img width={100} height={'auto'} src={'/assets/logo.png'} alt='Logo' />
@@ -159,7 +159,7 @@ const NavBar = () => {
 
             </div>
           ) : (
-            <div className={`flex items-center   gap-20 pt-5`}>
+            <div className={`flex items-center   gap-20 `}>
               
               
                   <Link href={'/'}>
