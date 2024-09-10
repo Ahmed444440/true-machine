@@ -5,10 +5,10 @@ import { Navigation, Autoplay, EffectFade, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import DOMPurify from 'isomorphic-dompurify';
 
 import { ServicesData } from '../../../data';
 import Link from 'next/link';
+import DOMPurify from 'isomorphic-dompurify';
 
 const ServiceSlider = () => {
 
