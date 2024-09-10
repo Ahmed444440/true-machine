@@ -32,7 +32,7 @@ const Slider = () => {
        >
        { sliderData.map((res)=>(
           <>
-          <SwiperSlide className='relative text-center'>
+          <SwiperSlide className='relative text-center z-0'>
           <div className='lg:w-2/4 w-full absolute top-5  text-white lg:top-60 lg:left-96'>
           <h1 className='lg:text-[70px]  font-bold'>{res.title}</h1>
           <p className='lg:mt-12 mt-0 text-sm lg:text-xl'>{res.des}</p>
