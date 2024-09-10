@@ -10,10 +10,11 @@ import {partnerslider} from '../../../data';
 const Partner = () => {
     return (
         
-        <div className="text-center pt-10 lg:px-16 px-5">
+        <div className="text-center pt-10 lg:px-16 px-5 py-5 mb-10">
             <div className="xl:w-[700px] m-auto mb-14 sm:w-full">
-                <h1 className="text-5xl text-primary_color font-bold mb-3 ">Our Partners</h1>
-                <p className="text-secondary_color">Value Technologies proudly is the partner of the highest end brands for Engineering Solutions Sector and Apparel & non-apparel solutions sector.</p>
+                <h1 className="text-xl lg:text-3xl  font-semibold ">Our Partners</h1>
+                <div className='border-primary_color m-auto w-[20%] lg:w-[10%] border-t-8 rounded-lg my-5'/>
+                <p className="text-slate-600">Value Technologies proudly is the partner of the highest end brands for Engineering Solutions Sector and Apparel & non-apparel solutions sector.</p>
             </div>
       <Swiper
        modules={[Autoplay , Navigation]}
