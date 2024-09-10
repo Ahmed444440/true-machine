@@ -154,6 +154,69 @@ export const navbar = [
 
 
 export const ServicesData = [
+	{
+		id: 1,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle1",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 2,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle2",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 3,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle3",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 4,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle4",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+];
+export const Product = [
+	{
+		id: 1,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle1",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 2,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle2",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 3,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle3",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 4,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle4",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+    {
+		id: 5,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle3",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 6,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle4",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+];
     {
         id: 1,
         src: '/assets/slider_1.jpg',
