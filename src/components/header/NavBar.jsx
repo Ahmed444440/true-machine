@@ -180,7 +180,7 @@ const NavBar = () => {
                           // }}
                           >
                             {activeIndex === nav.id && nav.catagory && (
-                              <div className="z-50  border-[1px] border-solid bg-slate-50 bg-opacity-50  rounded-md">
+                              <div className="z-50  border-[1px] border-solid bg-slate-50   rounded-md">
                                 {nav.catagory.map((item, subindex) => (
                                   <div
                                     className="relative hover:bg-slate-200 hover:bg-opacity-30 rounded-t-sm group"
@@ -192,7 +192,7 @@ const NavBar = () => {
                                       key={item.id}
                                     >
                                       <li
-                                        className="text-black font-bold  transition-all duration-500 ease-in-out"
+                                        className="text-black text-sm font-semibold  transition-all duration-500 ease-in-out"
                                       >
 
                                         {/* href={generateLink(nav.path, slug[subindex]?.slug)} */}
@@ -202,10 +202,10 @@ const NavBar = () => {
                                       {activeIndexCatagory === item.id  && item.subCatagory &&(
                                         <div     onMouseLeave={() => {handleMouseLeave('subcategory') ,
                                            handleMouseLeave('catagory')}} 
-                                        className='absolute start-52  top-0 w-[300px] bg-white'> 
+                                        className='absolute start-[11.5rem] rounded-lg top-2 w-[300px] bg-slate-50'> 
                                           {item.subCatagory.map((sub) => (
-                                            <div className=' hover:bg-black' key={sub.name}>
-                                              <Link className='text-sm font-semibold ' href={'/'}>{sub.name}</Link>
+                                            <div className=' hover:bg-slate-200 rounded-lg hover:bg-opacity-30 p-3' key={sub.name}>
+                                              <Link className='text-black text-sm font-semibold ' href={'/'}>{sub.name}</Link>
                                             </div>
                                           ))}
                                         </div>
