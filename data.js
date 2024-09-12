@@ -17,6 +17,7 @@ export const sliderData = [
         src: '/assets/slider_1.jpg'
     }
 ]
+
 export const partnerslider = [
     {
         id: 1,
@@ -92,7 +93,7 @@ export const navbar = [
     {
         id: 2,
         name: "About Us",
-        path: "/aboutUs",
+        path: "/about",
     },
     ,
     {
@@ -143,7 +144,7 @@ export const navbar = [
     {
         id: 4,
         name: "Production",
-        path: "/portfolio",
+        path: "/production",
     },
     {
         id: 5,
@@ -217,6 +218,85 @@ export const Product = [
 		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
 	},
 ];
+
+
+export const productCatagory = [
+	{
+		id: 1,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle1",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	},
+	{
+		id: 2,
+		src: '/assets/slider_1.jpg',
+		title: "Test-Bottle2",
+		desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
+	}
+];
+
+
+
+
+
+export const Productgallery = [
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		height: 174,
+		tags: [
+			{ value: "Nature", title: "Nature" },
+			{ value: "Flora", title: "Flora" },
+		],
+		caption: "After Rain (Jeshu John - designerspics.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		height: 212,
+		caption: "Boats (Jeshu John - designerspics.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		height: 212,
+		caption: "Color Pencils (Jeshu John - designerspics.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		height: 213,
+		caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		height: 183,
+		caption: "37H (gratispgraphy.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 240,
+		//   height: 320,
+		tags: [{ value: "Nature", title: "Nature" }],
+		caption: "8H (gratisography.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		//   height: 190,
+		caption: "286H (gratisography.com)",
+	},
+	{
+		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		//   width: 320,
+		//   height: 148,
+		tags: [{ value: "People", title: "People" }],
+		caption: "315H (gratisography.com)",
+	},
+	
+];
+
 //     {
 //         id: 1,
 //         src: '/assets/slider_1.jpg',
@@ -242,3 +322,4 @@ export const Product = [
 //         desc: "Medical is the knowledge or master event. Identify the error of the we coding page speed.",
 //     },
 // ];
+

@@ -3,7 +3,7 @@ import React from "react";
 import DOMPurify from 'isomorphic-dompurify';
 import { Product } from '../../../../data';
 import Link from 'next/link';
-const description = () => {
+const Description = () => {
     return (
         <>
         <div className="title relative">
@@ -33,4 +33,4 @@ const description = () => {
         </>
     )
 }
-export default description;
+export default Description;
