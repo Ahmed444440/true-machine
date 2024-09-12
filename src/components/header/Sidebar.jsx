@@ -7,7 +7,7 @@ import { navbar } from '../../../data'
 const Sidebar = ({handleMouseEnter ,handleMouseLeave  ,toggle ,setToggle}) => {
   return (
     <div>
-    <div className={`sidebar ${toggle ? "open" : "close"} `}>
+    <div className={`sidebar bg-btn_color ${toggle ? "open" : "close"} `}>
       <div className="p-10">
         <div className="flex justify-between items-center mb-10">
           <Link href={'/'}><img alt="logo" width={100} height={'auto'} src={logo} /></Link>
