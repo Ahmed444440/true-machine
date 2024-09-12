@@ -27,7 +27,7 @@ const About = () => {
             Read More
           </button> */}
           <div className='my-10'>
-            <Link href={`/`} className={'hover:bg-btn_color text-btn_color font-semibold  border-[1px] rounded-md border-gray-400 hover:text-white hover py-3 px-7'} >
+            <Link href={`/`} className={'hover:bg-primary_color text-slate-700 font-semibold  border-[1px] rounded-md border-gray-400 hover:text-white hover py-3 px-7'} >
               Read More
             </Link>
           </div>

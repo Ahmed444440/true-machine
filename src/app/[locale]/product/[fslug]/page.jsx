@@ -2,7 +2,7 @@
 import React from "react";
 import DOMPurify from 'isomorphic-dompurify';
 import Link from 'next/link';
-import { Product } from "../../../../data";
+import { Product } from "../../../../../data";
 const Products = () => {
 
     const truncateText = (text, wordCount) => {

@@ -19,7 +19,7 @@ const ProductGallary = () => {
       }));
   return (
    <section className='py-10'>
-        <ImageGallery  imagesInfoArray={images} columnWidth={`md:${300} lg:${500} xl:${600}`} columnCount={3} gapSize={10} />
+        <ImageGallery  imagesInfoArray={images} columnWidth={300} columnCount={3} gapSize={10} />
 
    </section>
   )
