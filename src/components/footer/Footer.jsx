@@ -5,19 +5,19 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <section className='bg-btn_color py-20 lg:px-16'>
+        <section className='bg-black bg-opacity-90 py-20 px-5 lg:px-16'>
             <div className=' lg:flex   gap-28'>
-                <div className='lg:w-1/3'>
+                <div className='lg:w-1/3 '>
                     <img width={300} className=' invert brightness-0' alt='logo' src='/assets/logo.png' />
-                    <p className='text-gray-300 py-5'>With a total of more than 50 Employees including 17 Service Engineers, we all have one goal, to add value to our products.</p>
+                    <p className='text-gray-300 py-10'>With a total of more than 50 Employees including 17 Service Engineers, we all have one goal, to add value to our products.</p>
                     <SocialMedia />
                 </div>
-                <div className='lg:w-1/3 '>
+                <div className='lg:w-1/3  py-10 lg:py-0'>
                     <h3 className='text-white text-xl font-semibold my-5'>Company Links</h3>
                     {
                         navbar.map((item) => (
                             <ul key={item.id}>
-                                <li className='text-white text-sm my-3 '>
+                                <li className='text-white text-[15px] my-5 '>
                                     <Link href={item.path}>{item.name}</Link>
                                 </li>
                             </ul>

@@ -4,7 +4,7 @@ import SocialMedia from '../socialMedia/SocialMedia'
 
 const FirstNav = () => {
     return (
-        <section className='bg-blue_Color  px-5 lg:px-16 py-2'>
+        <section className='bg-primary_color  px-5 lg:px-16 py-2'>
             <div className='flex justify-between items-center'>
                 <div className='hidden lg:flex items-center gap-10'>
                     {/* mail */}
