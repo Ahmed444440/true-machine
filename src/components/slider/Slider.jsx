@@ -10,9 +10,25 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 // import required modules
 import { Navigation, Pagination } from 'swiper/modules';
-import { sliderData } from '../../../data';
+import { fetchData } from '../../../utils/api'
+import { useTranslation } from "react-i18next";
+import DOMPurify from "isomorphic-dompurify";
 const Slider = () => {
+  const truncateText = (text, wordCount) => {
+    return text?.split(' ').slice(0, wordCount).join(' ') + '...';
+};
 
+ const [data , setData]=useState([])
+
+     const {t ,i18n} = useTranslation()
+     useEffect(()=>{
+            const SliderFetch= async ()=>{
+              const SliderData = await fetchData(`api/sliders`,i18n.language)
+                 setData(SliderData.data)
+               
+            }
+            SliderFetch()
+     },[])
   return (
     <div>
       <Swiper
@@ -30,14 +46,14 @@ const Slider = () => {
         className="mySwiper text-xl text-center"
 
       >
-        {sliderData.map((res) => (
+        {data.map((res) => (
           <>
             <SwiperSlide className='relative text-center z-0'>
               <div className='lg:w-2/4 w-full absolute top-5  text-white lg:top-60 lg:left-96'>
                 <h1 className='lg:text-[70px]  font-bold'>{res.title}</h1>
-                <p className='lg:mt-12 mt-0 text-sm lg:text-xl'>{res.des}</p>
+                <p className='lg:mt-12 mt-0 text-sm lg:text-xl'>{res.details}</p>
               </div>
-              <img className='w-full h-[65vb] lg:h-[130vb] ' src={res.src} alt="" />
+              <img className='w-full h-[65vb] lg:h-[130vb] ' src={`${res.photo}`} alt="" />
 
             </SwiperSlide>
           </>
