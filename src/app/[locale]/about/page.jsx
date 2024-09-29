@@ -1,12 +1,17 @@
-'use client'
-import Breadcrumb from '@/components/breadCrumb/BreadCrumb'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation';
-import React from 'react'
 
-const About = () => {
-    const router = usePathname();
-    const pathnames = router.split('/').filter((x) => x);
+import Breadcrumb from '@/components/breadCrumb/BreadCrumb'
+import { fetchData } from '../../../../utils/api'
+import Image from 'next/image'
+import React from 'react'
+import initTranslations from '@/app/i18n'
+
+const About = async ({params}) => {
+    const i18nNamespaces = ["home"];
+    const { locale } = params
+    const { t } =  await initTranslations(locale, i18nNamespaces)
+    const aboutData = await fetchData(`api/about-us`,locale)
+    const data =  aboutData?.data;
+     console.log(data)
     return (
         <section>
 
@@ -26,9 +31,8 @@ const About = () => {
 
                 <div className='absolute left-7 bottom-10 lg:top-[40%] lg:start-[40%]'>
                     <h1 className='capitalize  text-3xl lg:text-7xl text-white font-semibold'>
-                        {(pathnames)}
+                        
                     </h1>
-                    <Breadcrumb pathnames={pathnames} />
                 </div>
             </div>
 
@@ -36,19 +40,18 @@ const About = () => {
                 <div className="  gap-10 flex flex-col md:flex-row  pt-10 ">
                     <div className="w-full md:w-1/2">
                         <img
-                            src="/assets/home-about.jpeg"
-                            className="rounded-lg h-[400px] object-cover"
+                            src={`${data.photo}`}
+                            className="rounded-lg h-[400px] w-full object-cover"
                         />
                     </div>
                     <div className="w-full md:w-1/2  ">
                         <div className="my-4 ">
-                        <h2 className="text-xl lg:text-3xl  font-semibold">About Us</h2>
+                        <h2 className="text-xl lg:text-3xl  font-semibold">{data?.title}</h2>
                             <div className='border-primary_color  w-[20%] lg:w-[15%] border-t-8 rounded-lg   ' />
                         </div>
 
                         <p className="text-slate-600 mb-4 mt-10 leading-10">
-                            VALUE technologies was established in 2003 as a result of long history in the business line of software and machine-tools since 1994, where the business initially started with the CAD /CAM /CAE.
-                            VALUE technologies was established in 2003 as a result of long history in the business line of software and machine-tools since 1994, where the business initially started with the CAD /CAM /CAE.
+                        {data?.details}
                         </p>
                         {/* <button className="mt-4 py-3 px-7 bg-transparent  text-primary_color rounded-md border-solid border-primary_color border-2 hover:bg-primary_color hover:ease-in-out hover:text-white hover:delay-200 ">
             Read More
