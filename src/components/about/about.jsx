@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import { fetchData } from '../../../utils/api'
 import React, { useEffect, useState } from "react";

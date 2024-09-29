@@ -10,7 +10,7 @@ const About = () => {
     return (
         <section>
 
-            <div className='relative w-full h-[55vh] lg:h-[80vh] '>
+            {/* <div className='relative w-full h-[55vh] lg:h-[80vh] '>
                 <Image
                     src='/assets/home-about.jpeg'
                     alt='img'
@@ -30,7 +30,9 @@ const About = () => {
                     </h1>
                     <Breadcrumb pathnames={pathnames} />
                 </div>
-            </div>
+            </div> */}
+
+            <Breadcrumb/>
 
             <div className='py-10 px-5 lg:px-16'>
                 <div className="  gap-10 flex flex-col md:flex-row  pt-10 ">
