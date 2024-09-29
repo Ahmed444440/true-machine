@@ -3,14 +3,16 @@ import React from "react";
 import DOMPurify from 'isomorphic-dompurify';
 import { Product } from '../../../../data';
 import Link from 'next/link';
+import Breadcrumb from "@/components/breadCrumb/BreadCrumb";
 const Description = () => {
     return (
         <>
-        <div className="title relative">
+        {/* <div className="title relative">
             <img src="/assets/home-about.jpeg" className="w-full h-[350px] object-cover" alt="img" />
             <div className="overlay absolute bg-black bg-opacity-55 w-full h-full left-0 right-0 top-0" />
              <h1 className="text-xl absolute end-0 start-[35%] top-[40%] lg:text-5xl font-bold text-white">Sheet Metal Working</h1>
-        </div>
+        </div> */}
+        <Breadcrumb/>
         <section className="bg-white pt-7 mb-10">
       <div className="lg:px-16 px-5 mx-auto gap-10 flex flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2 md:mt-0 md:ml-10 mb-6">

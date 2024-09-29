@@ -3,6 +3,7 @@ import React from "react";
 import DOMPurify from 'isomorphic-dompurify';
 import Link from 'next/link';
 import { productCatagory } from "../../../../data";
+import Breadcrumb from "@/components/breadCrumb/BreadCrumb";
 const PageProduct = () => {
 
     const truncateText = (text, wordCount) => {
@@ -12,11 +13,13 @@ const PageProduct = () => {
     return (
         <>
         
-           <div className="title relative">
+           {/* <div className="title relative">
             <img src="/assets/home-about.jpeg" className="w-full h-[350px] object-cover" alt="img" />
             <div className="overlay absolute bg-black bg-opacity-55 w-full h-full left-0 right-0 top-0" />
              <h1 className="text-xl absolute end-0 start-[35%] top-[40%] lg:text-5xl font-semibold text-white">Sheet Metal Working</h1>
-            </div>
+            </div> */}
+
+            <Breadcrumb/>
         <div className="lg:px-16 px-5 pt-5 py-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 p-4 ">
                     {productCatagory.map((items, index) => (

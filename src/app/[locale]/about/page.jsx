@@ -15,27 +15,6 @@ const About = async ({params}) => {
     return (
         <section>
 
-            {/* <div className='relative w-full h-[55vh] lg:h-[80vh] '>
-                <Image
-                    src='/assets/home-about.jpeg'
-                    alt='img'
-                    layout='fill'
-                    objectFit='cover'
-                    quality={100}
-                    className='w-full h-full'
-                    sizes="(max-width: 600px) 150vw,
-               (max-width: 1200px) 50vw,
-               "
-                />
-                <div className='absolute inset-0 bg-black opacity-55' />
-
-                <div className='absolute left-7 bottom-10 lg:top-[40%] lg:start-[40%]'>
-                    <h1 className='capitalize  text-3xl lg:text-7xl text-white font-semibold'>
-                        
-                    </h1>
-                </div>
-            </div> */}
-
             <Breadcrumb/>
 
             <div className='py-10 px-5 lg:px-16'>

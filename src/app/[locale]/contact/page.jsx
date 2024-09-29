@@ -1,37 +1,13 @@
 'use client'
 import Breadcrumb from '@/components/breadCrumb/BreadCrumb'
 import Form from '@/components/form/Form'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const Contact = () => {
-    const router = usePathname();
-    const pathnames = router.split('/').filter((x) => x);
     return (
         <section className='bg-gray-100'>
 
-            <div className='relative w-full h-[55vh] lg:h-[80vh] '>
-                <Image
-                    src='/assets/home-about.jpeg'
-                    alt='img'
-                    layout='fill'
-                    objectFit='cover'
-                    quality={100}
-                    className='w-full h-full'
-                    sizes="(max-width: 600px) 150vw,
-               (max-width: 1200px) 50vw,
-               "
-                />
-                <div className='absolute inset-0 bg-black opacity-55' />
-                
-                <div className='absolute left-7 bottom-10 lg:top-[40%] lg:start-[40%]'>
-                <h1 className='capitalize  text-3xl lg:text-7xl text-white font-semibold'>
-                    {(pathnames)}
-                </h1>
-                    <Breadcrumb pathnames={pathnames} />
-                </div>
-            </div>
+          <Breadcrumb/>
 
             <div className='lg:flex  py-20 px-5 lg:px-16'>
                 <div className='lg:w-1/2'>
