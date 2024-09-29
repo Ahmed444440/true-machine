@@ -2,12 +2,13 @@ import React from 'react'
 import logo from '../../../public/assets/logo.png'
 import Link from 'next/link'
 import { navbar } from '../../../data'
+import LanguageChanger from '../languageChanger/LanguageChanger'
 
 
-const Sidebar = ({handleMouseEnter ,handleMouseLeave  ,toggle ,setToggle}) => {
+const Sidebar = ({handleMouseEnter, t ,handleMouseLeave  ,toggle ,setToggle}) => {
   return (
     <div>
-    <div className={`sidebar ${toggle ? "open" : "close"} `}>
+    <div className={`sidebar bg-white  ${toggle ? "open" : "close"} `}>
       <div className="p-10">
         <div className="flex justify-between items-center mb-10">
           <Link href={'/'}><img alt="logo" width={100} height={'auto'} src={logo} /></Link>
@@ -32,11 +33,11 @@ const Sidebar = ({handleMouseEnter ,handleMouseLeave  ,toggle ,setToggle}) => {
 
                 <Link
 
-                  className="text-white text-xl font-semibold   hover:text-primary-500"
+                  className="text-black text-xl font-semibold   hover:text-primary-500"
                   href={item.path}
                   onClick={() => setToggle(!toggle)}
                 >
-                  {(item.name)}
+                  {t(item.name)}
                 </Link>
               </li>
 
@@ -60,7 +61,7 @@ const Sidebar = ({handleMouseEnter ,handleMouseLeave  ,toggle ,setToggle}) => {
 
 
           </div>
-          {/* <LanguageChanger/> */}
+          <LanguageChanger/>
 
 
 

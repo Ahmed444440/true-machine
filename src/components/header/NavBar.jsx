@@ -5,8 +5,12 @@ import { navbar } from '../../../data'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import ResponsiveHeader from './ResponsiveHeader'
+import LanguageChanger from '../languageChanger/LanguageChanger'
+import { useTranslation } from 'react-i18next'
 
 const NavBar = () => {
+
+  const {t ,i18n}=useTranslation()
 
   const path = usePathname()
 
@@ -150,7 +154,7 @@ const NavBar = () => {
 
 
   return (
-    <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0 bg-white py-4  ${isFixed && ' fixed top-0 left-0 h-16  '}`}>
+    <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0 bg-white py-4  ${isFixed && ' fixed top-0 left-0 shadow-xl  h-20  '}`}>
 
       <div>
         {
@@ -158,7 +162,7 @@ const NavBar = () => {
             (
               <ResponsiveHeader setToggle={setToggle} toggle={toggle}/>
             ) : (
-              <div className={`flex items-center   gap-20 `}>
+              <div className={`flex justify-between items-center   gap-20 `}>
                 <Link href={'/'}>
                   <img width={150} height={'auto'} src={'/assets/logo.png'} alt='Logo' />
                 </Link>
@@ -168,7 +172,7 @@ const NavBar = () => {
                       <div key={nav.id} className='' onMouseEnter={() => handleMouseEnter(nav.id, 'category')}  onMouseLeave={() =>handleMouseLeave('subcategory') } onClick={() => handleLink(nav.id)} >
                         <ul key={index} className=' flex items-center  '>
                           <li className='  text-sm font-semibold text-slate-900  relative  hover:bg-slate-300 py-2 px-3'>
-                            <Link href={nav.path}>{(nav.name)}</Link>
+                            <Link href={nav.path}>{t(nav.name)}</Link>
                           </li>
                           <div
                       
@@ -196,7 +200,7 @@ const NavBar = () => {
                                       >
 
                                         {/* href={generateLink(nav.path, slug[subindex]?.slug)} */}
-                                        <Link className='animatedText' href={'/'} >{(item.title)}</Link>
+                                        <Link className='animatedText' href={'/'} >{t(item.title)}</Link>
                                       </li>
 
                                       {activeIndexCatagory === item.id  && item.subCatagory &&(
@@ -205,7 +209,7 @@ const NavBar = () => {
                                         className='absolute start-[11.5rem] rounded-lg top-2 w-[300px] bg-slate-50'> 
                                           {item.subCatagory.map((sub) => (
                                             <div className=' hover:bg-slate-200 rounded-lg hover:bg-opacity-30 p-3' key={sub.name}>
-                                              <Link className='text-black text-sm font-semibold ' href={'/'}>{sub.name}</Link>
+                                              <Link className='text-black text-sm font-semibold ' href={'/'}>{t(sub.name)}</Link>
                                             </div>
                                           ))}
                                         </div>
@@ -232,20 +236,21 @@ const NavBar = () => {
                       </div>
                     ))}
 
-                    <div>
-                      {/* <LanguageChanger /> */}
-                    </div>
+                   
                   </div>
 
                 </div>
 
+                <div className=''>
+                      <LanguageChanger/>
+                    </div>
 
               </div>
             )
         }
         {/* sidebar */}
         <div ref={sidebarRef}>
-          <Sidebar toggle={toggle} setToggle={setToggle} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} data={data} />
+          <Sidebar t={t} toggle={toggle} setToggle={setToggle} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} data={data} />
         </div>
 
       </div>
