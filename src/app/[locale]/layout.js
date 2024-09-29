@@ -19,7 +19,7 @@ const i18nNamespaces = ["home"];
 
 
 export default async function RootLayout({ children  ,params}) {
-  const {locale} =params
+  const {locale} = params
   const { resources, t } = await initTranslations(locale, i18nNamespaces)
 
 	return (
