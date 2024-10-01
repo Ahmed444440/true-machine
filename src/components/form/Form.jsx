@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 
@@ -91,6 +92,7 @@ const Form = () => {
                         Send
                     </button>
                 </div>
+                <div><ResponseMessage message={responseMessage}/></div>
 
             </form>
         </section>
