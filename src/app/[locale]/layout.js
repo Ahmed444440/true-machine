@@ -30,9 +30,9 @@ export default async function RootLayout({ children  ,params}) {
 					locale={locale}
 					resources={resources}
 				>
-					<Header />
+					<Header params={params}/>
 					{children}
-					<Footer />
+					<Footer params={params}/>
 				</TranslationsProvider>
 			</body>
 		</html>
