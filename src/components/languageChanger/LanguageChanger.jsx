@@ -37,7 +37,7 @@ export default function LanguageChanger() {
   };
 
   return (
-    <select className='outline-none px-8  py-3 rounded-full bg-opacity-50 bg-primary_color text-black border-[1px] border-solid border-primary_color  ' onChange={handleChange} value={currentLocale}>
+    <select className='outline-none px-8  py-3 rounded-xl bg-opacity-50 bg-primary_color text-black border-[1px] border-solid border-primary_color  ' onChange={handleChange} value={currentLocale}>
       <option value="en">English</option>
       <option value="ar">العربية</option>
     </select>

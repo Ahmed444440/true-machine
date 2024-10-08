@@ -18,8 +18,6 @@ const Products = async ({ params }) => {
     const productData = await fetchData(`api/single-category/${slug}`, locale)
     const productsDetails = productData?.data;
 
-    // console.log('productsDetails:::',productsDetails) 
-
 
     return (
         <>
@@ -36,7 +34,7 @@ const Products = async ({ params }) => {
                                 </div>
                                 <div className="p-2">
                                     <h2 className="text-xl font-bold text-slate-800  mb-2 mt-5">{t(items.title)}</h2>
-                                    <div className=" text-[15px] text-gray-600  font-[500] " dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize((truncateText(items.details || '', 20))) }} />
+                                    <div className=" text-[15px] text-gray-600  font-[500] " dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t(truncateText(items.details || '', 20))) }} />
                                     <div className='my-8'>
                                         <Link href={`/product/${slug}/${items.slug}`} className={'bg-transparent  text-primary_color rounded-md border-solid border-primary_color border-[1px] hover:bg-primary_color hover:ease-in-out hover:text-white hover:delay-200  py-3 px-7'} >
                                             {t("Read More")}

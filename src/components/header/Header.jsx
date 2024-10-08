@@ -2,11 +2,11 @@ import React from 'react'
 import FirstNav from './FirstNav'
 import NavBar from './NavBar'
 
-const Header = () => {
+const Header = ({  locale }) => {
   return (
     <section>
-            <FirstNav/>
-            <NavBar/>
+      <FirstNav locale={locale} />
+      <NavBar />
 
     </section>
 

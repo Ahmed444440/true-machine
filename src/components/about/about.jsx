@@ -23,7 +23,7 @@ const About =  () => {
             AboutFetch()
      },[])
   return (
-    <section className="bg-white pt-7 mb-10  lg:px-16 px-5">
+    <section className="bg-white py-16 lg:px-16 px-5">
 
       <div className="  gap-10 flex flex-col md:flex-row  pt-10 ">
         <div className="w-full md:w-1/2">
@@ -33,14 +33,19 @@ const About =  () => {
           />
         </div>
         <div className="w-full md:w-1/2  ">
-          <h2 className="text-xl lg:text-3xl  font-semibold">{t(data?.title)}</h2>
+          <h2 className="text-xl lg:text-3xl  text-center lg:text-start font-semibold">{t(data?.title)}</h2>
           <div className="my-5">
-            <div className='border-primary_color  w-[20%] lg:w-[15%] border-t-8 rounded-lg   ' />
+            <div className='border-primary_color  w-[20%] lg:w-[15%] border-t-4 rounded-lg m-auto  lg:m-0  ' />
           </div>
 
-          <div className='text-slate-600 mb-4 mt-10 leading-10 ' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t(truncateText(data?.details || '', 50))) }} />
+          <div className='text-slate-600 mb-4 mt-10 leading-10 text-center lg:text-start ' dangerouslySetInnerHTML={{
+                                            __html: DOMPurify.sanitize(t(truncateText(data.details, 50)), {
+                                                ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'li', 'ol', 'span'],
+                                                ALLOWED_ATTR: ['href', 'target', 'style']
+                                            })
+                                        }}/>
 
-          <div className='my-10'>
+          <div className='my-10  lg:block flex justify-center'>
             <Link href={`/about`} className={'hover:bg-primary_color text-slate-700 font-semibold  border-[1px] rounded-md border-gray-400 hover:text-white hover py-3 px-7'} >
               {t("Read More")}
             </Link>

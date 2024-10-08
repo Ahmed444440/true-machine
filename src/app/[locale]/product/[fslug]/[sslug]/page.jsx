@@ -14,7 +14,6 @@ const Description = async ({ params }) => {
   const productData = await fetchData(`api/single-service/${slug}`, locale)
   const productsDetails = productData?.data;
 
-  console.log('productsDetails:::', productsDetails)
 
   return (
     <>
@@ -24,14 +23,14 @@ const Description = async ({ params }) => {
 
         <div className="lg:px-16 px-5 mx-auto gap-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 md:mt-0 md:ml-10 mb-6">
-            <h2 className="text-xl lg:text-3xl  font-semibold">{productsDetails?.title}</h2>
+            <h2 className="text-xl lg:text-3xl  font-semibold">{t(productsDetails?.title)}</h2>
             <div className='border-primary_color w-[20%] lg:w-[20%] border-t-8 rounded-lg my-4' />
            
 
             <div
               className="text-slate-600 mb-4"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(productsDetails?.details)
+                __html: DOMPurify.sanitize(t(productsDetails?.details))
               }}
             />
 

@@ -43,7 +43,7 @@ const Form = () => {
 
 
         try {
-            const response = await fetch('http://api.truemachinecnc.com/api/contact-submit?=s', {
+            const response = await fetch('http://api.truemachinecnc.com/api/contact-submit', {
                 method: 'POST',
                 headers: myHeaders,
                 body: JSON.stringify(formData)
