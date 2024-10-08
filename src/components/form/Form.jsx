@@ -82,13 +82,13 @@ const Form = () => {
                 <h3 className='text-3xl '>Send Us Message </h3>
                 <p className='text-sm py-2 text-slate-500'>if you have Question , Fill this form </p>
              </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type='text' id='name' name='name' onChange={handleChange} value={formData.name} placeholder='Name' className='block py-3 border-[1px] my-3  rounded-sm ps-7 w-full' />
                 <input type='email' id='email' name='email' onChange={handleChange} value={formData.email} placeholder='Email' className='block py-3 border-[1px] my-3  rounded-sm ps-7 w-full' />
                 <input type='number' id='number' name='number' onChange={handleChange} value={formData.number} placeholder='Phone' className='block py-3 border-[1px] my-3  rounded-sm ps-7 w-full' />
                 <textarea placeholder='Message' name='message' onChange={handleChange} id='message' value={formData.message} className='block py-3 border-[1px] my-3  rounded-sm ps-7 w-full' />
                 <div className='flex justify-end'>
-                    <button type='submit' onSubmit={handleSubmit} className='border-slate-200 hover:bg-blue_Color bg-btn_color text-white rounded-sm border-[1px] px-7 py-2'>
+                    <button type='submit'  className='border-slate-200 hover:bg-blue_Color bg-btn_color text-white rounded-sm border-[1px] px-7 py-2'>
                         Send
                     </button>
                 </div>

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ResponsiveHeader from './ResponsiveHeader'
 import LanguageChanger from '../languageChanger/LanguageChanger'
 import { useTranslation } from 'react-i18next'
+import { fetchData } from '../../../utils/api'
 
 const NavBar = () => {
 
@@ -21,6 +22,7 @@ const NavBar = () => {
   const [activeIndexCatagory, setActiveIndexCatagory] = useState(null);
 
   const [activeLink, setActiveLink] = useState(1)
+
 
   const handleLink = (id) => {
     setActiveLink(id)
@@ -111,37 +113,37 @@ const NavBar = () => {
   }, [])
 
 
-  // useEffect(() => {
-  //   const fetchDataFromAPI = async () => {
-  //     try {
-  //       const result = await fetchData(`api/settings`, i18n.language);
-  //       setData(result?.data);
-  //       // console.log('result::', result?.data)
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //       // setError(error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchDataFromAPI = async () => {
+      try {
+        const result = await fetchData(`api/settings`, i18n.language);
+        setData(result?.data);
+        // console.log('result::', result?.data)
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        // setError(error);
+      }
+    };
 
-  //   fetchDataFromAPI();
-  // }, [])
-
-
-  // useEffect(() => {
-  //   const fetchDataService = async () => {
-  //     try {
-  //       const response = await fetchData(`api/services`, i18n.language)
-  //       // console.log(response?.data)
-  //       setSlug(response?.data)
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
+    fetchDataFromAPI();
+  }, [])
 
 
-  //   }
+  useEffect(() => {
+    const fetchDataService = async () => {
+      try {
+        const response = await fetchData(`api/services`, i18n.language)
+        // console.log(response?.data)
+        setSlug(response?.data)
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
 
-  //   fetchDataService()
-  // }, [])
+
+    }
+
+    fetchDataService()
+  }, [])
 
   useEffect(() => {
     // Add the event listener for clicks
@@ -164,7 +166,7 @@ const NavBar = () => {
             ) : (
               <div className={`flex justify-between items-center   gap-20 `}>
                 <Link href={'/'}>
-                  <img width={150} height={'auto'} src={'/assets/logo.png'} alt='Logo' />
+                  <img width={150} height={'auto'} src={data?.logo} alt='Logo' />
                 </Link>
                 <div>
                   <div className='flex   gap-6 relative'>
@@ -250,7 +252,7 @@ const NavBar = () => {
         }
         {/* sidebar */}
         <div ref={sidebarRef}>
-          <Sidebar t={t} toggle={toggle} setToggle={setToggle} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} data={data} />
+          <Sidebar t={t}  toggle={toggle} setToggle={setToggle} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} data={data} />
         </div>
 
       </div>
