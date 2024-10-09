@@ -9,7 +9,7 @@ export default function Home({ params }) {
       <Slider />
       <About  />
       <Services params={params} />
-      <Partner />
+      {/* <Partner /> */}
 
     </main>
   );

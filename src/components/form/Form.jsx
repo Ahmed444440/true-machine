@@ -43,7 +43,7 @@ const Form = () => {
 
 
         try {
-            const response = await fetch('http://api.truemachinecnc.com/api/contact-submit?=s', {
+            const response = await fetch('http://api.truemachinecnc.com/api/contact-submit', {
                 method: 'POST',
                 headers: myHeaders,
                 body: JSON.stringify(formData)
@@ -82,6 +82,7 @@ const Form = () => {
                 <h3 className='text-3xl '>Send Us Message </h3>
                 <p className='text-sm py-2 text-slate-500'>if you have Question , Fill this form </p>
              </div>
+         
             <form onSubmit={handleSubmit}>
                 <input type='text' id='name' name='name' onChange={handleChange} value={formData.name} placeholder='Name' className='block py-3 border-[1px] my-3  rounded-sm ps-7 w-full' />
                 <input type='email' id='email' name='email' onChange={handleChange} value={formData.email} placeholder='Email' className='block py-3 border-[1px] my-3  rounded-sm ps-7 w-full' />

@@ -240,7 +240,9 @@ export const productCatagory = [
 
 export const Productgallery = [
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		height: 174,
 		tags: [
@@ -250,44 +252,51 @@ export const Productgallery = [
 		caption: "After Rain (Jeshu John - designerspics.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		height: 212,
 		caption: "Boats (Jeshu John - designerspics.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		height: 212,
 		caption: "Color Pencils (Jeshu John - designerspics.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		height: 213,
 		caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		height: 183,
 		caption: "37H (gratispgraphy.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 240,
 		//   height: 320,
 		tags: [{ value: "Nature", title: "Nature" }],
 		caption: "8H (gratisography.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		//   height: 190,
 		caption: "286H (gratisography.com)",
 	},
 	{
-		src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
+		alt:'img',
+        src: "https://truemachinecnc.com/wp-content/uploads/2020/06/factory_2-900x600.jpg",
 		//   width: 320,
 		//   height: 148,
 		tags: [{ value: "People", title: "People" }],
