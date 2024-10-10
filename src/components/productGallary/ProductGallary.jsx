@@ -21,6 +21,8 @@ const ProductGallary = () => {
     ProductionFetch()
   }, [])
 
+  console.log(data)
+
   const images = data.map((image) => ({
     src: image?.photo,
     alt: image?.alt || '',
