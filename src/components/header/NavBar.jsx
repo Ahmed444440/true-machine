@@ -155,6 +155,29 @@ const NavBar = () => {
   }, [toggle]);
 
 
+
+  // api/categories
+
+  useEffect(() => {
+    const fetchDataService = async () => {
+      try {
+        const response = await fetchData(`api/categories`, i18n.language)
+        // console.log(response?.data)
+        setSlug(response?.data)
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+
+
+    }
+
+    fetchDataService()
+  }, [])
+
+
+
+
+
   return (
     <section className={`px-5 lg:px-16 z-10  top-0 left-0 right-0 bottom-0 bg-white py-4  ${isFixed && ' fixed top-0 left-0 shadow-xl  h-20  '}`}>
 
@@ -176,14 +199,11 @@ const NavBar = () => {
                           <li className='  text-sm font-semibold text-slate-900  relative  hover:bg-slate-300 py-2 px-3'>
                             <Link href={nav.path}>{t(nav.name)}</Link>
                           </li>
-                          <div
+                          {/* <div
                       
                             key={index}
                             className="absolute  top-14  flex  transition-all duration-500 ease-in-out"
-                          // style={{
-                          //   opacity: activeIndex === nav.id ? '1' : '0',
-                          //   transform: activeIndex === nav.id ? 'translateY(10)' : 'translateY(-20px)',
-                          // }}
+                        
                           >
                             {activeIndex === nav.id && nav.catagory && (
                               <div className="z-50  border-[1px] border-solid bg-slate-50   rounded-md">
@@ -192,6 +212,7 @@ const NavBar = () => {
                                     className="relative hover:bg-slate-200 hover:bg-opacity-30 rounded-t-sm group"
                                     key={subindex}
                                     onMouseEnter={() => handleMouseEnter(item.id ,'subcategory')}
+                                    onMouseLeave={() =>handleMouseLeave('category') }
                                   >
                                     <ul
                                       className="py-2 p-5"
@@ -201,28 +222,17 @@ const NavBar = () => {
                                         className="text-black text-sm font-semibold  transition-all duration-500 ease-in-out"
                                       >
 
-                                        {/* href={generateLink(nav.path, slug[subindex]?.slug)} */}
-                                        <Link className='animatedText' href={'/'} >{t(item.title)}</Link>
+                                        <Link className='animatedText' href={generateLink(nav.path, slug[index]?.slug)} >{t(item.title)}</Link>
                                       </li>
 
-                                      {activeIndexCatagory === item.id  && item.subCatagory &&(
-                                        <div     onMouseLeave={() => {handleMouseLeave('subcategory') ,
-                                           handleMouseLeave('catagory')}} 
-                                        className='absolute start-[11.5rem] rounded-lg top-2 w-[300px] bg-slate-50'> 
-                                          {item.subCatagory.map((sub) => (
-                                            <div className=' hover:bg-slate-200 rounded-lg hover:bg-opacity-30 p-3' key={sub.name}>
-                                              <Link className='text-black text-sm font-semibold ' href={'/'}>{t(sub.name)}</Link>
-                                            </div>
-                                          ))}
-                                        </div>
-                                      )}
+                                   
                                     </ul>
                                     <div className="border-b-[1px] border-solid border-gray-200 text-white" />
                                   </div>
                                 ))}
                               </div>
                             )}
-                          </div>
+                          </div> */}
 
                           <div >
 

@@ -8,14 +8,14 @@ import { Productgallery } from '../../../data';
 const ProductGallary = () => {
 
   const [data, setData] = useState(Productgallery)
-  const [loading, setLoader] = useState(false)
+  const [loading, setLoader] = useState(true)
 
   const { i18n } = useTranslation()
   useEffect(() => {
     const ProductionFetch = async () => {
       const Production = await fetchData(`api/galleries`, i18n.language)
       setData(Production.data)
-      setLoader(true)
+      setLoader(false)
 
     }
     ProductionFetch()

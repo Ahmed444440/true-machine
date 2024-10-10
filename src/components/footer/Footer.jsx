@@ -46,8 +46,8 @@ const Footer = async ({ params }) => {
                             <h4 className='text-lg'>{t("Address")}</h4>
                             <div className='block'>
                                 {
-                                    settings?.addresses?.map((item) => (
-                                        <p className='text-gray-300 text-sm'>{item}</p>
+                                    settings?.addresses?.map((item, index) => (
+                                        <p key={index} className='text-gray-300 text-sm'>{item}</p>
 
                                     ))
                                 }
@@ -64,8 +64,8 @@ const Footer = async ({ params }) => {
                             <h4 className='text-lg'>{t("Email")}</h4>
                             <div className='block'>
                                 {
-                                    settings?.emails?.map((item) => (
-                                        <Link href={`mailto:${item}`} className='text-gray-300 text-sm'>{item}</Link>
+                                    settings?.emails?.map((item ,index) => (
+                                        <Link key={index} href={`mailto:${item}`} className='text-gray-300 text-sm'>{item}</Link>
 
                                     ))
                                 }
@@ -83,8 +83,8 @@ const Footer = async ({ params }) => {
                             <h4 className='text-lg'>{t("Phone")}</h4>
                             <div className='block'>
                                 {
-                                    settings?.phones?.map((item) => (
-                                        <Link href={`tel:${item}`} className='block text-gray-300 text-sm'>{item}</Link>
+                                    settings?.phones?.map((item ,index) => (
+                                        <Link key={index} href={`tel:${item}`} className='block text-gray-300 text-sm'>{item}</Link>
 
                                     ))
                                 }

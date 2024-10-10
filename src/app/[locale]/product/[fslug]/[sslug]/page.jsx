@@ -33,7 +33,7 @@ const Description = async ({ params }) => {
                 __html: DOMPurify.sanitize(t(productsDetails?.details))
               }}
             />
-
+    
           </div>
           <div className="w-full md:w-1/2">
             <img
